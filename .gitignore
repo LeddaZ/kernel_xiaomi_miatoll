@@ -138,3 +138,6 @@ out/
 
 # AnyKernel3
 anykernel3/
+
+# Logs
+log.txt
