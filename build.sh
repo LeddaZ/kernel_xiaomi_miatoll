@@ -55,12 +55,14 @@ export COMPILER=gcc
 # Requirements
 if [[ "${COMPILER}" = gcc ]]; then
     if [ ! -d "${KDIR}/gcc64" ]; then
+        echo "Downloading arm64 gcc..."
         curl -sL https://github.com/cyberknight777/gcc-arm64/archive/refs/heads/master.tar.gz | tar -xzf -
         mv "${KDIR}"/gcc-arm64-master "${KDIR}"/gcc64
     fi
 
     if [ ! -d "${KDIR}/gcc32" ]; then
-	curl -sL https://github.com/cyberknight777/gcc-arm/archive/refs/heads/master.tar.gz | tar -xzf -
+        echo "Downloading arm gcc..."
+        curl -sL https://github.com/cyberknight777/gcc-arm/archive/refs/heads/master.tar.gz | tar -xzf -
         mv "${KDIR}"/gcc-arm-master "${KDIR}"/gcc32
     fi
 
@@ -111,6 +113,7 @@ elif [[ "${COMPILER}" = clang ]]; then
 fi
 
 if [ ! -d "${KDIR}/anykernel3/" ]; then
+    echo "Cloning AnyKernel3..."
     git clone --depth=1 https://github.com/LeddaZ/AnyKernel3 -b miatoll anykernel3
 fi
 
