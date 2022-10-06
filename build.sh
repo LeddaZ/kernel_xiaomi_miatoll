@@ -36,7 +36,7 @@ export CODENAME="miatoll"
 export BUILDER="LeddaZ"
 
 # Kernel repository URL.
-export REPO_URL="https://github.com/LeddaZ/kernel_xiaomi_miatoll"
+export REPO_URL="https://github.com/LeddaZ/kernel_xiaomi_sm6250"
 
 # Commit hash of HEAD.
 COMMIT_HASH=$(git rev-parse --short HEAD)
