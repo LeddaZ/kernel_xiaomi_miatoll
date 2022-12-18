@@ -56,13 +56,13 @@ export COMPILER=gcc
 if [[ "${COMPILER}" = gcc ]]; then
     if [ ! -d "${KDIR}/gcc64" ]; then
         echo "Downloading arm64 gcc..."
-        curl -sL https://github.com/cyberknight777/gcc-arm64/archive/refs/heads/master.tar.gz | tar -xzf -
+        curl -sL https://github.com/LeddaZ/gcc-arm64/archive/refs/heads/master.tar.gz | tar -xzf -
         mv "${KDIR}"/gcc-arm64-master "${KDIR}"/gcc64
     fi
 
     if [ ! -d "${KDIR}/gcc32" ]; then
         echo "Downloading arm gcc..."
-        curl -sL https://github.com/cyberknight777/gcc-arm/archive/refs/heads/master.tar.gz | tar -xzf -
+        curl -sL https://github.com/LeddaZ/gcc-arm/archive/refs/heads/master.tar.gz | tar -xzf -
         mv "${KDIR}"/gcc-arm-master "${KDIR}"/gcc32
     fi
 
