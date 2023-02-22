@@ -36,7 +36,7 @@ export CODENAME="miatoll"
 export BUILDER="LeddaZ"
 
 # Kernel repository URL.
-export REPO_URL="https://github.com/LeddaZ/kernel_xiaomi_sm6250"
+export REPO_URL="https://github.com/LeddaZ/android_kernel_xiaomi_sm6250"
 
 # Commit hash of HEAD.
 COMMIT_HASH=$(git rev-parse --short HEAD)
@@ -184,7 +184,7 @@ mod() {
     echo -e "\n\e[1;32m[✓] Built Modules! \e[0m"
 }
 
-zipn="Ghibli-miatoll-$(date '+%Y%m%d-%H%M').zip"
+zipn="Ghibli-ksu-miatoll-$(date '+%Y%m%d-%H%M').zip"
 if test -z "$(git rev-parse --show-cdup 2>/dev/null)" &&
    head=$(git rev-parse --verify HEAD 2>/dev/null); then
         zipn="${zipn::-4}-$(echo $head | cut -c1-8).zip"
